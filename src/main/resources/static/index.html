@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/js/jquery3.3.1.js"></script>
+</head>
+<body>
+<div id="contentDiv"></div>
+<div id="deleteResult"></div>
+<input type="text" id="data">
+<input type="button" value="获取数据" onclick="getData()"><br>
+<script>
+    function getData() {
+        var dataStr = $("#data").value();
+        alert(dataStr)
+        $.ajax({
+            url:'http://localhost:8888/getData',
+            data:{strURL:dataStr},
+            type:'post',
+            success:function (msg) {
+                $("#contentDiv").html(msg);
+            }
+        })
+    }
+</script>
+</body>
+</html>

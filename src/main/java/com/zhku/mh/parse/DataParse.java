@@ -26,7 +26,7 @@ public class DataParse {
 //            String bookID = ele.attr("data-sku");
 //            String bookPrice = ele.select("div[class=p-price]").select("strong").select("i").text();
 //            String bookName = ele.select("div[class=p-name]").select("em").text();
-            data = ele.select("td").text();
+            data = ele.select("td").html();
             //创建一个对象，这里可以看出，使用Model的优势，直接进行封装
 //            JdModel jdModel = new JdModel();
             //对象的值
